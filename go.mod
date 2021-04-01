@@ -1,5 +1,5 @@
-module github.com/um198/stats
+module github.com/um198/stats/v2
 
 go 1.16
 
-require github.com/um198/bank v0.0.0-20210401113515-5c2e126ae8fd // direct
+require github.com/um198/bank/v2 v2.0.0

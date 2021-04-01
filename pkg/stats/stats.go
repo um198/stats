@@ -1,7 +1,7 @@
 package stats
 
 import (
-	"github.com/um198/bank/pkg/types"
+	"github.com/um198/bank/v2/pkg/types"
 	
 )
 
@@ -9,9 +9,9 @@ import (
 func Avg(payments []types.Payment) types.Money {
 	var averageAmount types.Money = 0
 	for _, payment := range payments {
-		// if payment.Status!=types.StatusFail {
+		if payment.Status!=types.StatusFail {
 		averageAmount += payment.Amount
-		// }
+		}
 	}
 	return averageAmount/types.Money(len(payments))
 
@@ -21,9 +21,9 @@ func TotalInCategory(payments []types.Payment, category types.Category) types.Mo
 	var paymentsFromCategory types.Money = 0
 	for _, payment := range payments {
 		if payment.Category==category{
-			// if payment.Status!=types.StatusFail {
+			if payment.Status!=types.StatusFail {
 				paymentsFromCategory += payment.Amount
-			// }
+			}
 		} 
 	}
 	return paymentsFromCategory
