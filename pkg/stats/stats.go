@@ -1,6 +1,7 @@
 package stats
 
 import (
+	"github.com/um198/bank/pkg/types"
 	
 )
 
