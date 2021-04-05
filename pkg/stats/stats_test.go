@@ -8,6 +8,8 @@ import (
 	"github.com/um198/bank/v2/pkg/types"
 )
 
+
+
 func TestCategoriesAvg(t *testing.T) {
 	payments := []types.Payment{
 		{ID: 1, Amount: 1_000_00, Category: "auto", Status: types.StatusOk},
@@ -29,7 +31,7 @@ func TestCategoriesAvg(t *testing.T) {
 
 	result := CategoriesAvg(payments)
 	if !reflect.DeepEqual(expected, result) {
-		t.Errorf("invalid result, expected %v, actual %v", expected, result)
+		t.Errorf("\ninvalid result, \ngot:  %v, \nwant: %v", expected, result)
 	}
 
 }
